@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />		
+		<link rel="stylesheet" href="css/notice_suo_over.css" />	
+		<link rel="stylesheet" href="css/jedate.css" />
+		<link rel="stylesheet" type="text/css" href="css/dateRange.css"/>
+		<link rel="stylesheet" type="text/css" href="css/monthPicker.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-table.css">
+    	<link rel="stylesheet" href="css/docs.css">
+	</head>
+	<body>
+		<div class="container2">
+			<div class="content">
+				<div class="con_right">
+					<div class="main">
+						<div class="main_nav">
+							<span class="server">检查点名称</span>
+							<input type="text" class="code" />
+							<span class="state">创建人</span>
+							<select id="state_box" name="selse">
+								<option value="1">全部</option>
+								<option value="2">采集中</option>
+								<option value="3">未开始</option>
+								<option value="4">暂停</option>
+								<option value="2">已完成</option>
+								<option value="3">异常</option>
+							</select>
+							<span class="level">编目状态</span>
+							<select id="level_box" name="selse">
+								<option value="1">全部</option>
+								<option value="2">采集中</option>
+								<option value="3">未开始</option>
+								<option value="4">暂停</option>
+								<option value="2">已完成</option>
+								<option value="3">异常</option>
+							</select>
+							<span class="time">时间段</span>
+							<div text="black">	
+							<div class="wrapper">				
+								 <div class="ta_date" id="div_date_demo3">
+									<span class="date_title" id="date_demo3"></span>
+									<a class="opt_sel" id="input_trigger_demo3" href="#">
+										<i class="i_orderd"><img src="img/time.png" style="position: fixed;left: 1270px !important;"></i>
+									</a>
+								</div>
+								<div id="datePicker"></div> 
+							</div>
+							<input type="button" id="search" value="搜索">
+						</div>	
+					</div>
+				</div>
+				<div class="batch">
+					<a href="#" class="start">批量删除</a>
+				</div>
+					<div class="container" style="width: 100%;height:600px;">
+					    <div class="row">
+					        <div class="col-md-9" role="main" style="width: 100%;height:600px;">           
+				                <div class="bs-example"style="width: 100%;height:600px;">
+				                    <table id="table"></table>
+				                </div>               
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/dateRange.js"></script>
+	<script type="text/javascript" src="js/monthPicker.js"></script>
+    <script src="js/docs.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="js/bootstrap-table-zh-CN.js"></script>
+	<script type="text/javascript" src="js/notice_suo_over.js"></script>
+	<script type="text/javascript">
+    var dateRange = new pickerDateRange('date_demo3', {
+				aRecent7Days : 'aRecent7DaysDemo3', //最近7天
+				isTodayValid : false,
+				//startDate : '2013-04-14',
+				//endDate : '2013-04-21',
+				//needCompare : true,
+				//isSingleDay : true,
+				//shortOpr : true,
+				defaultText : ' 至 ',
+				inputTrigger : 'input_trigger_demo3',
+				theme : 'ta',
+				success : function(obj) {
+					$("#dCon_demo3").html('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});
+    //alert("YYYY/MM".match(/\w+|d+/g).join("-"))
+    	//批量删除
+	 $(".start").click(function(){
+	  if(window.confirm("是否确定删除报警信息?")){
+	   /**
+	    * :checkbox 所有的checkbox
+	    * :not(#allCheckbox) 不包含id为allCheckbox
+	    *  被选中的
+	    */
+	   $(":checkbox:not(#allCheckbox):checked").parent().parent().remove();  
+	  }
+	 });
+</script><div style="z-index: 999; display: none; left: 50px; top: 276.8px;" class="jedatebox" id="jedatebox"></div>
+</html>

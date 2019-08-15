@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "细黑";
+}
+body {
+ /* background: url(../img/login_top.png) no-repeat;*/
+  height: 333px;
+  position: relative;
+  overflow: hidden;
+}
+.container2 {
+  width: 100%;
+  height: 2000px;
+  overflow: hidden;
+}
+.container2 h1 {
+  font-size: 25px;
+  color: #FFFFFF;
+  position: absolute;
+  left: 43px;
+  top: 23px;
+  border: none !important;
+}
+.container2 .nav {
+  width: 100%;
+  height: 41px;
+
+  border-bottom: 1px solid #d0d0d0;
+  position: absolute;
+  top: 112px;
+  left: 0;
+  padding-top: 4px;
+}
+.container2 .content {
+  width: 100%;
+  height: 2000px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.container2 .content .con_right {
+  position: absolute;
+  background: cadetblue;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  height: 2000px;
+  background: #fcfcfc;
+  min-width: 900px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.container2 .content .con_right .main .main_nav {
+  border: 1px solid #D0D0D0;
+  height: 66px;
+  background: #f5f5f5;
+  position: relative;
+}
+.container2 .content .con_right .main .main_nav .server {
+  font-size: 16px;
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  line-height: 30px;
+}
+.container2 .content .con_right .main .main_nav .code {
+  width: 225px;
+  height: 30px;
+  padding-left:10px;
+  border: 1px solid #D0D0D0;
+  outline: none;
+  background: none;
+  font-size: 14px;
+  border-radius: 3px;
+  position: absolute;
+  left: 90px;
+  top: 17px;
+}
+.container2 .content .con_right .main .main_nav .state {
+  font-size: 16px;
+  position: absolute;
+  left: 380px;
+  top: 18px;
+  line-height: 30px;
+}
+.container2 .content .con_right .main .main_nav #state_box {
+  width: 98px;
+  height: 30px;
+  border: 1px solid #D0D0D0;
+  outline: none;
+  background: none;
+  color: #000;
+  font-size: 14px;
+  position: absolute;
+  left: 450px;
+  top: 17px;
+}
+.container2 .content .con_right .main .main_nav .level {
+  font-size: 16px;
+  position: absolute;
+  left: 620px;
+  top: 18px;
+  line-height: 30px;
+}
+.container2 .content .con_right .main .main_nav #level_box {
+  width: 98px;
+  height: 30px;
+  border: 1px solid #D0D0D0;
+  outline: none;
+  background: none;
+  color: #000;
+  font-size: 14px;
+  position: absolute;
+  left: 680px;
+  top: 17px;
+}
+.container2 .content .con_right .main .main_nav #search {
+  width: 121px;
+  height: 30px;
+  background: #60acfa;
+  position: absolute;
+  left: 1230px;
+  top: 19px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.container2 .content .con_right .main .main_nav .time {
+  font-size: 16px;
+  position: absolute;
+  left: 850px;
+  top: 18px;
+  line-height: 30px;
+}
+.container2 .content .con_right .main .main_nav .ta_date{
+  position: absolute;
+  left: 940px;
+  top: 18px;
+}
+.container2 .content .con_right .batch {
+  margin:20px 0px;
+  color: #444444;
+  font-size: 15px;
+}
+.container2 .content .con_right .batch .delete {
+  margin-left: 30px;
+  text-decoration: none;
+}
+.container2 .content .con_right .batch .pause {
+  margin-left: 35px;
+  text-decoration: none;
+}
+.container2 .content .con_right .batch .start {
+  margin-left: 35px;
+  text-decoration: none;
+}
+.container2 .content .con_right .container {
+  position: relative;
+}
+.pagination{
+    position: absolute !important;
+    left: 40% !important;
+    top: 400px !important;
+}
+.n{
+			font-size: 16px;
+			position: absolute;
+			left: 16px;
+			top: 60px;
+			line-height: 30px;
+		}
+		.nc{
+			width: 225px;
+			height: 30px;
+			padding-left:10px;
+			border: 1px solid #D0D0D0;
+			outline: none;
+			background: none;
+			font-size: 14px;
+			border-radius: 3px;
+			position: absolute;
+			left: 90px;
+			top: 60px;
+		}
+		.y{
+			font-size: 16px;
+			position: absolute;
+			left: 380px;
+			top: 60px;
+			line-height: 30px;
+		}
+		.yx{
+			width: 225px;
+			height: 30px;
+			border: 1px solid #D0D0D0;
+			padding-left:10px;
+			outline: none;
+			background: none;
+			font-size: 14px;
+			border-radius: 3px;
+			position: absolute;
+			left: 450px;
+			top: 60px;
+		}
+		.container2 .content .con_right .main .main_nav{height: 108px !important;}
+

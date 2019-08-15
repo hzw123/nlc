@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>2添加内容外部链接</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />		
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/unqualified.css" />	
+		<link rel="stylesheet" href="css/jedate.css" />
+		<link rel="stylesheet" type="text/css" href="css/dateRange.css"/>
+		<link rel="stylesheet" type="text/css" href="css/monthPicker.css"/>
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/docs.css">
+	</head>
+	<style type="text/css">
+		::selection {
+			background-color: #E13300;
+			color: white;
+		}
+		::moz-selection {
+			background-color: #E13300;
+			color: white;
+		}
+		::webkit-selection {
+			background-color: #E13300;
+			color: white;
+		}
+	
+		a {
+			color: #003399;
+			background-color: transparent;
+			font-weight: normal;
+		}
+		input {
+			color: #333333;
+			font: 12px /1.5 Tahoma, Helvetica, 'SimSun', sans-serif;
+		}
+		code {
+			font-family: Consolas, Monaco, Courier New, Courier, monospace;
+			font-size: 12px;
+			background-color: #f9f9f9;
+			border: 1px solid #D0D0D0;
+			color: #002166;
+			display: block;
+			margin: 14px 0 14px 0;
+			padding: 12px 10px 12px 10px;
+		}
+		h1 {
+			color: #444;
+			background-color: transparent;
+			border-bottom: 1px solid #D0D0D0;
+			font-size: 19px;
+			font-weight: normal;
+			margin: 0 0 14px 0;
+			padding: 14px 15px 10px 15px;
+		}
+		.main_nav{
+			width: 1270px !important;
+			height: 348px !important;
+		}
+		.nav_con{
+			width: 1236px !important;
+			height: 260px !important;
+			margin: 0 auto;
+			margin-top: 50px;
+			
+		}
+		.con_lj{
+			width: 60px;
+			height:26px;
+			font-size: 14px;
+			float: left;
+			line-height: 26px;
+		}
+		.con_p{
+			width: 1175px !important;
+			height: 30px !important;
+			border: 1px solid #9D9D9D;
+			float: right;
+		}
+		.con_gjc{
+			width: 60px;
+			height:26px;
+			font-size: 14px;
+			float: left;
+			line-height: 26px;
+		}
+		.con_gp{
+			width: 1175px !important;
+			height: 30px !important;
+			border: 1px solid #9D9D9D;
+			float: right;
+			line-height: 28px;
+			color: #D0D0D0;
+		}
+		#add{
+			width: 120px;
+			height: 30px;
+			background: #60ACFA;
+			position: absolute;
+			left: 500px;
+			top: 225px;
+			border: none;
+			border-radius: 10px;
+			font-size: 15px;
+			color: #FFFFFF;
+			letter-spacing: 3px;
+			text-align: center;
+		}
+    </style>
+	<body>
+		<div class="container2">
+			
+			<div class="content">
+				
+				<div class="con_right">
+					<div class="main">
+						
+						<div class="main_nav">
+							<span class="server">添加内容——国图官网</span><br />
+							<div class="nav_con">
+								<p class="con_lj">外部链接</p><p class="con_p"></p><br />
+								<p style="color: #c3c3c3;width: 290px; height: 27px;font-size: 14px;margin-top: 12px;">例子：http://www.9stars.cn/p_product</p><br/>
+								<p class="con_gjc" style="float: left;">关键词</p><p class="con_gp">在此输入关键词，最多填写五个，以逗号分隔</p>
+								<input type="button" name="" id="add" value="保存" />
+							</div>
+						</div>
+					   
+					    
+					</div>
+					<div class="list_box">
+					    <p>创建采集任务<a href="#" class="off"><img src="img/off.png"></a></p>	
+					   <table class="table">
+					   	<tr>
+					   		<td>
+					   			 <a href="#">任务名称</a>
+					   			 <input type="text"  placeholder="输入可包含，汉子,字母，数字，链接符和下划线"/>
+					   		</td>
+					   	</tr>
+					    <tr>
+					   		<td>         
+					               	<a href="#">任务描述</a>
+					               <input type="text"  placeholder="任意描述"/>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td> 
+							      <a href="#"> URL列表</a>
+							      <textarea name="yoursuggest" cols ="46" rows = "3"></textarea>
+					       </td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<a href="#">选择服务器</a>
+					   			<select id="state_box" name="selse">
+								<option value="1">列表中只显示有空闲线程的服务器</option>
+								<option value="2">1</option>
+								<option value="3">2</option>
+								<option value="4">3</option>
+							</select>
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<a href="#">线程</a>
+					   			<select id="state_box" name="selse"  style="margin-left: 50px;">
+								<option value="1">列表中只显示空闲线程</option>
+								<option value="2">1</option>
+								<option value="3">2</option>
+								<option value="4">3</option>
+							</select>
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<a href="#">选择模板</a>
+					   			<select id="state_box" name="selse" style="margin-left: 15px;">
+								<option value="1">默认模板</option>
+								<option value="2">1</option>
+								<option value="3">2</option>
+								<option value="4">3</option>
+							</select>
+					   		</td>
+					   	</tr>
+					   	<tr style="margin-bottom:-30px;">
+					   		<td>         					               
+					               <input type="text" class="surt">
+					               <button class="lead">导入surt文件</button>
+					               <a href="#" class="del">删除</a>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					              <input type=checkbox class="check"><a href="#" class="found">任务创建完成后立即开始采集</a>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					              <a href="#" class="fill">请填写任务名称后再点击创建!</a>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					               <button class="cancel">取消</button>
+					               <button class="revise">修改参数</button>
+					               <button class="set">创建</button>
+					        </td>
+					   	</tr>
+					   </table>
+					    	
+					    	
+					    	
+					</div>
+					<!--<div class="batch">
+						<a href="#" class="delete">批量删除</a>
+						<a href="#" class="pause">批量暂停</a>
+						<a href="#" class="pause">批量开放</a>
+						<a href="#" class="start">批量开始/继续</a>
+					</div>-->
+					<!--<div class="container" style="width: 100%;height:600px;background: #000000;">
+					    <div class="row">
+					        <div class="col-md-9" role="main" style="width: 100%;height:600px;background: #000000;">           
+					            <div>
+					                <div class="page-header">
+					                    <h2 id="pagination-table">批量删除</h2>
+					                </div>
+					                <div class="bs-example"style="width: 100%;height:600px;">
+					                    <table data-toggle="table" data-url="data2.json" data-height="246" data-pagination="true">
+					                        <thead>
+					                            <tr>
+					                                <th data-field="state" data-checkbox="true" style="background: #ebebeb;"></th>
+					                                <th data-field="name" data-align="center">序号</th>
+					                                <th data-field="name" data-align="center">采集任务名称</th>
+					                                <th data-field="price" data-align="">状态</th>
+					                                <th data-field="name" data-align="center">已采集时间</th>
+					                                <th data-field="name" data-align="center">服务器</th>
+					                                <th data-field="price" data-align="">平均采集速度</th>
+					                                <th data-field="price" data-align="">已抓取文档数量</th>
+					                                 <th data-field="price" data-align="">剩余抓取文档数量</th>
+					                                <th data-field="name" data-align="center">已抓取文档荣量</th>
+					                                <th data-field="name" data-align="center">采集进度</th>
+					                                <th data-field="name" data-align="center">任务创建时间</th>
+					                                <th data-field="price" data-align="">不合格原因</th>
+					                                 <th data-field="price" data-align="">操作</th>
+					                            </tr>
+					                        </thead>
+					                    </table>
+					                </div>               
+					            </div>          
+					        </div>
+					    </div>
+					</div>-->
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/dateRange.js"></script>
+	<script type="text/javascript" src="js/monthPicker.js"></script>
+	
+	
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/examples.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/docs.js"></script>
+	<script src="js/collect.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+    var dateRange = new pickerDateRange('date_demo3', {
+				aRecent7Days : 'aRecent7DaysDemo3', //最近7天
+				isTodayValid : false,
+				//startDate : '2013-04-14',
+				//endDate : '2013-04-21',
+				//needCompare : true,
+				//isSingleDay : true,
+				//shortOpr : true,
+				defaultText : ' 至 ',
+				inputTrigger : 'input_trigger_demo3',
+				theme : 'ta',
+				success : function(obj) {
+					$("#dCon_demo3").html('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});
+    //alert("YYYY/MM".match(/\w+|d+/g).join("-"))
+</script>
+<div style="z-index: 999; display: none; left: 50px; top: 276.8px;" class="jedatebox" id="jedatebox"></div>
+</html>

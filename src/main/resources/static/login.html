@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="css/login2.css" />
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/gVerify.js"></script>
+		<script type="text/javascript" src="js/loginValidate.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!--<h1>推广工程网络资源保护与服务系统</h1>-->
+			<!-- <form action="/login" method="post" id="login_form"> -->
+			<table class="login_box">
+				<tr>
+					<td class="list">
+						<a href="#">账号登录</a>
+					</td>
+				</tr>
+			<tr>
+				<td style="position: relative;">
+					<a href="#" class="frred">用户名</a>
+					<input type="text" id="mail"/>
+					<span style="position: absolute;left:200px;bottom:-10px;"><!--请输入正确的邮箱地址--></span>
+					
+				</td>
+			</tr>
+			<tr>
+				<td style="position: relative;">
+					<a href="#" class="frred">密&nbsp;&nbsp;&nbsp;码</a>
+					<input type="password" id="pwd"/>
+					<span style="position: absolute;left:200px;bottom:-10px;"></span>
+				</td>
+			</tr>
+			<tr>
+				<td style="position: relative;">
+					<a href="#" class="frred">验证码</a>
+					<input type="text" id="code_input" value="" placeholder="请输入验证码"/>
+					<div id="v_container" style="width: 130px;height: 40px;margin-left:310px;margin-top: -40px;"></div>
+					<a id="my_button">看不清，换一张</a>
+					<span id="validate" style="position: absolute;left:200px;bottom:-10px;"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<input type="reset" value="重&nbsp;&nbsp;&nbsp;置"  class="reset"/>
+					<input type="submit" value="登&nbsp;&nbsp;&nbsp;录"  class="submit"/>
+				</td>
+			</tr>
+		 </table>
+		<!-- </form> -->
+		</div>
+	</body>
+</html>
+

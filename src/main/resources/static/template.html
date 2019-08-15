@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />	
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-table.css" />	
+		<link rel="stylesheet" href="css/template.css" />	
+		<link rel="stylesheet" href="css/jedate.css" />
+		<link rel="stylesheet" type="text/css" href="css/dateRange.css"/>
+		<link rel="stylesheet" type="text/css" href="css/monthPicker.css"/>
+    <link rel="stylesheet" href="css/docs.css">
+	</head>
+	<body>
+		<div class="container2">
+			<div class="content">
+				<div class="con_right">
+					<div class="list_box" style="display: none;">
+					   <p>创建参数模板<a href="#" class="off"><img src="img/off.png"></a></p>	
+					   <table class="table">
+					   	<tr>
+					   		<td>
+					   			 <div class="left_message"><a href="#">输入模板名称</a></div>
+					   			 <div class="right_message"><input type="text"  placeholder="默认当前日期+00N" class="oneinput" /></div>
+					   		</td>
+					   	</tr>
+					    <tr>
+					   		<td>         
+					               	<div class="left_message"><a href="#" style="font-weight: bold;">Meta data</a></div>
+					               <div class="right_message"></div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td> 
+							      <div class="left_message"><a href="#"> Description:</a></div>
+							      <div class="right_message"><input type="text"  placeholder="domainCrawl"/></div>
+					       </td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<div class="left_message"><a href="#">Crawl Operator:</a></div>
+						   		<div class="right_message"><input type="text" placeholder="Admin"/></div>
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<div class="left_message"><a href="#">Crawl Organization:</a></div>
+						   		<div class="right_message"><input type="text"  placeholder=""/></div>	
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<div class="left_message"><a href="#">Crawl Job Recipient:</a></div>
+						   		<div class="right_message"><input type="text"  placeholder=""/></div>
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="font-weight: bold;">crawl-order</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>Heritrix crawl order.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" class="left_k">max-bytes-download:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="0" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" class="left_k">max-document-download:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="0" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" class="left_k">max-time-sec:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="0" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" class="left_k">max-toe-threads:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="50" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" class="left_k" style="font-weight: bold;">scope</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>DecidingScope.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 60px;">enabled:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="True" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 60px; font-weight: bold;">decide-rules</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>DecideRuleSequence.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 80px; font-weight: bold;">rules</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>This is a list of DecideRules to be applied in sequence.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 100px; font-weight: bold;">Accept</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>AcceptRule: always gives ACCEPT decision.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 100px; font-weight: bold;">NotOnDomainReject</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>NotOnDomainsDecideRule.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px;">decision:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<select name="Reject">
+							   			<option value="REJECT">REJECT</option>
+							   			<option value="REJECT">REJECT</option>
+							   		</select>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px;">surts-source-file:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px;">seeds-as-surt-prefixes:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<select name="">
+							   			<option value="True">True</option>
+							   			<option value="False">False</option>
+							   		</select>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 100px; font-weight: bold;">rejectIfTooManyHops</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>TooManyHopsDecideRule.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px; ">max-hops:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="3" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 100px; font-weight: bold;">acceptIfTransulusion:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>TransclusionDecideRule.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px;">max-trans-hops:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="3" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px;">max-speculative-hops:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="2" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 100px; font-weight: bold;">rejectIfPathological:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>PathologicalPathDecideRule.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px;">max-repetitions:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="3" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 100px; font-weight: bold;">rejectIfTooManyPathSegs:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>TooManyPathSegmentsDecideRule.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 130px;">max-path-depth:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="20" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 100px; font-weight: bold;">acceptIfPrerequisite:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>PrerequisiteAcceptDecideRule.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 30px; font-weight: bold;">http-headers:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<span>HTTP headers.</span>
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 60px;">user-agent:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="Mozilla/5.0(compatible; heritrix/1.14.4+http://webarchive.nlc.gov.cn)" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					            <div class="left_message"><a href="#" style="margin-left: 60px;">from:</a></div>
+					            <div class="right_message">
+						            <i>?</i>
+							   		<input type="text" placeholder="quyp@nlc.gov.cn" />
+						   		</div>
+					        </td>
+					   	</tr>
+					   </table>
+   	
+					</div>
+					<div class="main">
+						
+						<div class="main_nav">
+							<span class="server">参数模板名称</span>
+							<input type="text" class="code" />
+							<div text="black">							
+							<input type="button" id="search" value="搜索">
+						</div>	
+						</div>
+					    <div class="list">
+					    	<div class="row">
+					    		<div class="col-md-1 box2 establish">创建参数模板</div>					    		
+					    </div>
+					    
+					</div>
+					
+					<div class="batch">
+						<a href="#" class="delete">批量删除</a>
+						<a href="#" class="pause">导入参数模板</a>
+						<a href="#" class="start">导出参数模板</a>
+					</div>
+					<div class="container" style="width: 100%;height:600px;">
+					    <div class="row">
+					        <div class="col-md-9" role="main" style="width: 100%;height:500px;">           
+					            <!--<div>-->
+					                <table id="tab-template"></table>              
+					            <!--</div>-->          
+					        </div>
+					    </div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/dateRange.js"></script>
+	<script type="text/javascript" src="js/monthPicker.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="js/bootstrap-table-zh-CN.js"></script>
+    <script src="js/docs.js"></script>
+	<script src="js/collect.js"></script>
+	<script src="js/template.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+    var dateRange = new pickerDateRange('date_demo3', {
+				aRecent7Days : 'aRecent7DaysDemo3', //最近7天
+				isTodayValid : false,
+				//startDate : '2013-04-14',
+				//endDate : '2013-04-21',
+				//needCompare : true,
+				//isSingleDay : true,
+				//shortOpr : true,
+				defaultText : ' 至 ',
+				inputTrigger : 'input_trigger_demo3',
+				theme : 'ta',
+				success : function(obj) {
+					$("#dCon_demo3").html('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});
+		
+</script><div style="z-index: 999; display: none; left: 50px; top: 276.8px;" class="jedatebox" id="jedatebox"></div>
+</html>

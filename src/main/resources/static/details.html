@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />			
+		<link rel="stylesheet" href="css/details.css" />	
+		<link rel="stylesheet" href="css/jedate.css" />
+		<link rel="stylesheet" type="text/css" href="css/dateRange.css"/>
+		<link rel="stylesheet" type="text/css" href="css/monthPicker.css"/>
+		
+		
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-table.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap-table.css">-->
+    <link rel="stylesheet" href="css/docs.css">
+	</head>
+	<body>
+		<div class="container2">
+			
+			<div class="content">
+				
+				<div class="con_right">
+					<div class="main">
+						
+					<div class="main_nav">
+							
+							<div class='con_nav' style="height: 60px;">
+								<span class="name_finish">世界图书馆采集任务-采集中(有异常)</span>
+								<div id="loadBar01" class="loadBar">  
+						           <div>  
+						                <span class="percent">  
+						                   <i></i>  
+						                </span>  
+						           </div>  
+						           <span class="percentNum">0%</span>  
+						       </div> 
+							</div>
+						
+							<div class="con" style="height: 111px;">
+								<div class="row" style="margin-left: 15px !important;">
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">可用最大内存</div>
+									  	 <p class="num"><a href="#">1024</a>G</p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">已用内存</div>
+									  	 <p class="num"><a href="#">10</a>G</p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">已采集时间</div>
+									  	 <p class="num"><a href="#">15h22m16s</a></p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">抓取文档容量</div>
+									  	 <p class="num"><a href="#">5</a>G</p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">当前下载速度</div>
+									  	 <p class="num"><a href="#">126kb/s</a>个</p>
+									  </div>
+									   <div class="col-xs-1 con1">
+									  	 <div class="tit">平均采集速度</div>
+									  	 <p class="num"><a href="#">126kb/s</a>个</p>
+									  </div>
+									   <div class="col-xs-1 con1">
+									  	 <div class="tit">已抓取文档数量</div>
+									  	 <p class="num"><a href="#">10000</a>个</p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">剩余抓取文档数量</div>
+									  	 <p class="num"><a href="#">125</a>个</p>
+									  </div>
+								</div>
+					       </div>
+					       <div class="con_list" style="height: 70px;position: relative;">
+								<span class="server">URL</span>
+								<input type="text" class="code" />	
+								<span class="state">采集状态</span>
+								<select id="state_box" name="selse">
+									<option value="1">全部</option>
+									<option value="2">采集中</option>
+									<option value="3">未开始</option>
+									<option value="4">暂停</option>
+									<option value="2">已完成</option>
+									<option value="3">异常</option>
+								</select>
+								<div text="black">							
+								   <input type="button" id="search" value="搜索">
+							    </div>
+						</div>	
+					</div>
+					<div class="container" style="width: 100%;height:600px;">
+					    <div class="row">
+					        <div class="col-md-9" role="main" style="width: 100%;height:500px;">
+					            <table id="tab-details"></table>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/dateRange.js"></script>
+	<script type="text/javascript" src="js/monthPicker.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="js/bootstrap-table-zh-CN.js"></script>
+    <script src="js/docs.js"></script>
+	<script src="js/details.js"></script>
+	<script type="text/javascript">
+		//日历
+    var dateRange = new pickerDateRange('date_demo3', {
+				aRecent7Days : 'aRecent7DaysDemo3', //最近7天
+				isTodayValid : false,
+				//startDate : '2013-04-14',
+				//endDate : '2013-04-21',
+				//needCompare : true,
+				//isSingleDay : true,
+				//shortOpr : true,
+				defaultText : ' 至 ',
+				inputTrigger : 'input_trigger_demo3',
+				theme : 'ta',
+				success : function(obj) {
+					$("#dCon_demo3").html('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});
+    //alert("YYYY/MM".match(/\w+|d+/g).join("-"))
+    
+</script><div style="z-index: 999; display: none; left: 50px; top: 276.8px;" class="jedatebox" id="jedatebox"></div>
+</html>

@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>7统计模块——1访问统计</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />		
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/count_zi.css" />
+		
+		<link rel="stylesheet" href="css/jedate.css" />
+		<link rel="stylesheet" type="text/css" href="css/dateRange.css"/>
+		<link rel="stylesheet" type="text/css" href="css/monthPicker.css"/>
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/docs.css">
+	</head>
+	<style type="text/css">
+		::selection {
+			background-color: #E13300;
+			color: white;
+		}
+		::moz-selection {
+			background-color: #E13300;
+			color: white;
+		}
+		::webkit-selection {
+			background-color: #E13300;
+			color: white;
+		}
+	
+		a {
+			color: #003399;
+			background-color: transparent;
+			font-weight: normal;
+		}
+		input {
+			color: #333333;
+			font: 12px /1.5 Tahoma, Helvetica, 'SimSun', sans-serif;
+		}
+		code {
+			font-family: Consolas, Monaco, Courier New, Courier, monospace;
+			font-size: 12px;
+			background-color: #f9f9f9;
+			border: 1px solid #D0D0D0;
+			color: #002166;
+			display: block;
+			margin: 14px 0 14px 0;
+			padding: 12px 10px 12px 10px;
+		}
+		h1 {
+			color: #444;
+			background-color: transparent;
+			border-bottom: 1px solid #D0D0D0;
+			font-size: 19px;
+			font-weight: normal;
+			margin: 0 0 14px 0;
+			padding: 14px 15px 10px 15px;
+		}
+			a{
+				text-decoration: none !important;
+			}
+			.nav>li>a{
+				color:black !important;
+				background:none !important;
+				border: 1px solid #E0E0E0; 
+				margin-top: 10px;
+			}
+			.nav>li.active{height: 356px !important;}
+			
+			.nav-second-level li a{
+				padding-left: 25px !important;
+			}
+			.list_box{display: none;}
+			.ta_date .i_orderd img{position: initial !important; margin-top: -11px !important; }
+			.container2 .content .con_right .main .main_nav .time{left: 60px !important;}
+			.ta_date{left: 150px !important;}
+			.nav_con{
+				width: 1550px;
+				height: 520px;
+				/*background: #f7f7f7;*/
+				margin-left: 30px;
+			}
+			.nav_left{
+				width: 760px;
+				height: 410px;
+				float: left;
+				background: #f7f7f7 !important;
+			}
+			.nav_right{
+				width: 760px;
+				height: 410px;
+				float: right;
+				background: #f7f7f7 !important;
+			}
+			.count_p{
+				width: 130px;
+				height: 40px;
+				color: #4c8be3;
+				font-size: 16px;
+				line-height: 40px;
+				border-bottom: 3px solid #4C8BE3;
+			}
+			
+			
+			
+			.nav_t{
+				width: 1550px;
+				height: 520px;
+				/*background: #f7f7f7;*/
+				margin-left: 30px;
+			}
+			.nav_t_l{
+				width: 760px;
+				height: 410px;
+				float: left;
+				background: #f7f7f7 !important;
+			}
+			.nav_t_r{
+				width: 760px;
+				height: 410px;
+				float: right;
+				background: #f7f7f7 !important;
+			}
+			.count_t_p{
+				width: 130px;
+				height: 40px;
+				color: #4c8be3;
+				font-size: 16px;
+				line-height: 40px;
+				border-bottom: 3px solid #4C8BE3;
+			}
+			
+			.nav_s{
+				width: 1550px;
+				height: 400px;
+				background: #f7f7f7;
+				margin-left: 30px;
+			}
+			.nav_s_t{
+				width: 1550px;
+				height: 400px;
+			}
+    </style>
+	<body>
+		<div class="container2">
+			
+			<div class="content">
+				
+				
+				
+				<div class="con_right">
+					<div class="main">
+						
+						<div class="main_nav">
+							<div class="con" style="height: 111px;">
+								<div class="row" style="margin-left: 15px !important;">
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">采集数据</div>
+									  	 <p class="num"><a href="#">1000</a>个</p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">发布数据</div>
+									  	 <p class="num"><a href="#">1246879</a>个</p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">网站数</div>
+									  	 <p class="num"><a href="#">35489789</a>个</p>
+									  </div>
+									  <div class="col-xs-1 con1">
+									  	 <div class="tit">专题数</div>
+									  	 <p class="num"><a href="#">987888</a>个</p>
+									  </div>
+									  
+								</div>
+					       </div>
+						</div>
+					   <div class="nav_con">
+					   		<div style="width: 760px;height: 40px;border-bottom: 1px solid #d0d0d0;float: left;">
+					   			<p class="count_p">专题分类占比</p>
+					   		</div>
+					   		<div style="width: 760px;height: 40px;border-bottom: 1px solid #d0d0d0;float: right;">
+					   			<p class="count_p">网络类型占比</p>
+					   		</div>
+					   		<div class="nav_left" id="count"></div>
+					   		<div class="nav_right" id="count_r"></div>
+					   </div>
+					    <div class="nav_t">
+					   		<div style="width: 760px;height: 40px;border-bottom: 1px solid #d0d0d0;float: left;">
+					   			<p class="count_t_p">用户偏爱的专题</p>
+					   		</div>
+					   		<div style="width: 760px;height: 40px;border-bottom: 1px solid #d0d0d0;float: right;">
+					   			<p class="count_t_p">用户偏爱的网站类型</p>
+					   		</div>
+					   		<div class="nav_t_l" id="count_t_l"></div>
+					   		<div class="nav_t_r" id="count_t_r"></div>
+					   </div>
+					   <div class="nav_s">
+					   		<div style="width: 1550px;height: 40px;border-bottom: 1px solid #d0d0d0;float: left;">
+					   			<p class="count_t_p">关键词点击统计</p>
+					   		</div>
+					   		<!--<div style="width: 602px;height: 40px;border-bottom: 1px solid #d0d0d0;float: right;">
+					   			<p class="count_t_p">用户偏爱的网站类型</p>
+					   		</div>-->
+					   		<div class="nav_s_t" id="count_s"></div>
+					   		
+					   </div>
+					</div>
+					<div class="list_box">
+					    <p>创建采集任务<a href="#" class="off"><img src="img/off.png"></a></p>	
+					   <table class="table">
+					   	<tr>
+					   		<td>
+					   			 <a href="#">任务名称</a>
+					   			 <input type="text"  placeholder="输入可包含，汉子,字母，数字，链接符和下划线"/>
+					   		</td>
+					   	</tr>
+					    <tr>
+					   		<td>         
+					               	<a href="#">任务描述</a>
+					               <input type="text"  placeholder="任意描述"/>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td> 
+							      <a href="#"> URL列表</a>
+							      <textarea name="yoursuggest" cols ="46" rows = "3"></textarea>
+					       </td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<a href="#">选择服务器</a>
+					   			<select id="state_box" name="selse">
+								<option value="1">列表中只显示有空闲线程的服务器</option>
+								<option value="2">1</option>
+								<option value="3">2</option>
+								<option value="4">3</option>
+							</select>
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<a href="#">线程</a>
+					   			<select id="state_box" name="selse"  style="margin-left: 50px;">
+								<option value="1">列表中只显示空闲线程</option>
+								<option value="2">1</option>
+								<option value="3">2</option>
+								<option value="4">3</option>
+							</select>
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<a href="#">选择模板</a>
+					   			<select id="state_box" name="selse" style="margin-left: 15px;">
+								<option value="1">默认模板</option>
+								<option value="2">1</option>
+								<option value="3">2</option>
+								<option value="4">3</option>
+							</select>
+					   		</td>
+					   	</tr>
+					   	<tr style="margin-bottom:-30px;">
+					   		<td>         					               
+					               <input type="text" class="surt">
+					               <button class="lead">导入surt文件</button>
+					               <a href="#" class="del">删除</a>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					              <input type=checkbox class="check"><a href="#" class="found">任务创建完成后立即开始采集</a>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					              <a href="#" class="fill">请填写任务名称后再点击创建!</a>
+					        </td>
+					   	</tr>
+					   	<tr>
+					   		<td>         					               
+					               <button class="cancel">取消</button>
+					               <button class="revise">修改参数</button>
+					               <button class="set">创建</button>
+					        </td>
+					   	</tr>
+					   </table>
+					    	
+					    	
+					    	
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/dateRange.js"></script>
+	<script type="text/javascript" src="js/monthPicker.js"></script>
+	
+	
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/examples.js"></script>
+   
+    <script src="js/docs.js"></script>
+	<script src="js/collect.js"></script>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+
+	<script src="js/bootstrap-table-zh-CN.js"></script>
+	
+	<script src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/count.js"></script>
+		
+	<script type="text/javascript">
+    var dateRange = new pickerDateRange('date_demo3', {
+				aRecent7Days : 'aRecent7DaysDemo3', //最近7天
+				isTodayValid : false,
+				//startDate : '2013-04-14',
+				//endDate : '2013-04-21',
+				//needCompare : true,
+				//isSingleDay : true,
+				//shortOpr : true,
+				defaultText : ' 至 ',
+				inputTrigger : 'input_trigger_demo3',
+				theme : 'ta',
+				success : function(obj) {
+					$("#dCon_demo3").html('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});
+    //alert("YYYY/MM".match(/\w+|d+/g).join("-"))
+</script>
+<div style="z-index: 999; display: none; left: 50px; top: 276.8px;" class="jedatebox" id="jedatebox"></div>
+</html>
